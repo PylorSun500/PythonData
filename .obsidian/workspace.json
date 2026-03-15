@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "e93eb0080d6f23f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "39f24b32b620f17a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddcf6c2e022e64f2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "806de0accaa5faa5",
+    "type": "split",
+    "children": [
+      {
+        "id": "bdd60fa608a80ed0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb4241e58dd36744",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "572203d4d908feab",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "661e3c37f327320b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e63e923c6b7862f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "9741339c383da774",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32e006003cdab45e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "NoteMD/常识理论.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "常识理论 的反向链接列表"
+            }
+          },
+          {
+            "id": "e02799b1a9d5a0cb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "NoteMD/常识理论.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "常识理论 的出链列表"
+            }
+          },
+          {
+            "id": "698274b0a27641c5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "dbcac2d1ccadf1e6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "85bce61616e274cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "NoteMD/常识理论.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "常识理论 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "ddcf6c2e022e64f2",
+  "lastOpenFiles": [
+    "NoteMD/matplotlib.md",
+    "Code/general.data_read_and_process.code/wk_people_data.ipynb",
+    "Code/general.data_read_and_process.code/wkpeople_data.ipynb",
+    "NoteMD/pandas.md",
+    "NoteMD/常识理论.md",
+    "Code/general.data_read_and_process.code/people_data.ipynb",
+    "Code/general.data_read_and_process.code/Untitled.ipynb",
+    "Code/general.data_read_and_process.code/assets/people_data.xlsx",
+    "Code/general.data_read_and_process.code/people_data.xlsx",
+    "Code/general.data_read_and_process.code/assets/peking_tempreture_noheader.xlsx",
+    "Code/general.data_read_and_process.code/assets/peking_tempreture.xlsx",
+    "Code/general.data_read_and_process.code/assets",
+    "Code/general.data_read_and_process.code/Untitled Folder"
+  ]
+}
