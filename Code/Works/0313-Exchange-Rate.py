@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 
-df = pd.read_excel("/Users/pylorsun/Documents/Study/2025-2026第二学期/PythonData/Assets/exchange_data.xlsx")
+df = pd.read_excel("/home/pylorsun/Documents/Study/2025-2026第二学期/PythonData/Assets/exchange_data.xlsx")
 print(df.columns)
 y2017 = df[2017]
 y2019 = df[2019]
