@@ -61,24 +61,7 @@ plt.show()
 
 可以同时绘制多个柱形图，然后将它们并排显示
 
-[多组柱形图 示例代码](../Code/general.data_read_and_process.code/bar_double.py)
-
-```python
-y1 = np.array([12, 5, 15, 10, 6])
-y2 = [6, 8, 16, 11, 7]
-x = np.arange(len(y1))
-tk = [chr(i) for i in range(97, 97+5)]
-
-plt.bar(x, y1, width=0.4, label="产品A", tick_label=tk)
-plt.bar(x+0.4, y2, width=0.4, label="产品B", yerr=[1, 1.5, 1.2, 1.2, 1.1])
-
-plt.legend()
-plt.ylim(0, 20)  # 设置y轴范围
-plt.xlabel('产品说明')
-plt.ylabel('产量')
-plt.title('两组柱形图示例')
-plt.show()
-```
+[bar_double.py](../Code/general.data_read_and_process.code/bar_double.py)
 
 **实现思路**：
 1. 多组柱形图的核心思想是将不同组的数据在同一类别位置上并排显示
@@ -89,28 +72,7 @@ plt.show()
 
 ### 堆积柱形图
 
-[堆积柱形图 示例代码](../Code/general.data_read_and_process.code/bar_stack.py)
-
-```python
-y1 = np.array([12, 5, 15, 10, 6])
-y2 = [6, 8, 16, 11, 7]
-x = np.arange(len(y1))
-tk = [chr(i) for i in range(97, 97+5)]
-bar_width = 0.4
-
-bar0A = plt.bar(x, y1, width=0.4, label="产品A", tick_label=tk)
-bar0B = plt.bar(x, y2, width=0.4, label = "产品B",bottom=y1)
-
-# 添加数据标签
-for bA, bB in zip(bar0A, bar0B):
-    plt.text(bA.get_x() + bar_width/3, bA.get_height(), bA.get_height())
-    plt.text(bA.get_x() + bar_width/3, bB.get_height() + bA.get_height(), bB.get_height())
-plt.legend()
-plt.xlabel('产品说明')
-plt.ylabel('产量')
-plt.title('两组柱形图示例')
-plt.show()
-```
+[bar_stack.py](../Code/general.data_read_and_process.code/bar_stack.py)
 
 堆积柱形图通过分别将第二列各图形放在第一列的最高值上面。与多组柱形图类似，通过 **调整 x 坐标位置** 实现并排显示
 - 将 `plt.bar()` 返回的柱形对象保存到变量中，第二组柱形通过 `bottom=y1` 参数堆叠在第一组柱形之上。
@@ -133,4 +95,80 @@ plt.bar(x, y, width=0.4, yerr=[1, 1.5, 1.2, 1.2, 1.1])
 - 误差棒数据应该是一个与 y 数据长度相同的列表或数组，表示每个数据点的误差范围。
 
 误差棒从柱形顶部向上和向下延伸，直观展示数据的波动范围。
+
+## `pyplot.scatter()` 散点图
+
+```py
+pyplot.scatter(x, y, c=None, marker=None, alpha=None)
+```
+
+参数：
+`x` : x 轴数据
+`y` : y 轴数据
+
+## `pyplot.boxplot` 箱形图
+
+```py
+pyplot.boxplot(x, 
+            notch=None, sym=None, vert=None, whis=None, positions=None, 
+            widths=None, 
+            patch_artist=None, bootstrap=None,
+            usermedians=None, conf_intervals=None,
+            meanline=None, 
+            showmeans=None, showcaps=None, showbox=None, showfliers=None,
+            boxprops=None, labels=None, flierprops=None,
+            medianprops=None, meanprops=None,
+            capprops=None, whiskerprops=None)
+```
+其中：
+- `notch` ：箱体缺口
+- `whis` ：须线范围定义
+
+可以使用 `cbook.boxplot_stats` 快速统计最大值、最小值等特殊值。
+该方法返回一个字典，可以通过调用其键来映射对应的值。常用键如下：
+
+- `med` : 中位数
+- `q1` : 第一四分位数（25%）
+- `q3`: 第三四分位数（75%）
+- `whislo`: 下须（whisker low）
+- `whishi`: 上须（whisker high）
+- `fliers`: 离群值（异常值）
+- `mean`: 平均值（可选）
+- `cilo`, `cihi`: 置信区间（可选）
+- `label`: 数据标签（可选）
+
+### `pyplot.pie()` - 饼状图
+
+[pie.py](../Code/general.data_read_and_process.code/pie.py)
+
+用法：
+```py
+pie(x, explode=None, labels=None, autopct=None, pctdistance=0.6, startangle=None, * ,data=None, wedgeprops=None)
+```
+
+其中：
+- `autopct` 自动计算百分比，传入 **控制符** ，如 `%3.1f%%` ；
+- `*distance` 系列控制对应元素的相对距离；
+- `startangle` 控制开始的角度，默认是 `0` ，即 `x+` 。
+
+### 环状图
+
+使用 `wedgeprops` 控制扇形的属性。
+`wedgeprops` 的输入值是一个字典。例如：
+
+```py
+pie(..., wedgeprops={'width': 0.6})
+```
+
+这时，`width` 键控制扇形的径向宽度，使整个图表呈现环状图样式。
+
+### 分离型饼图
+
+使用 `explode` 属性使扇形之间出现空隙。传入数组或列表。这个列表的 `len()` 应该对应到饼图的数据量。例如：
+
+```py
+# 我们有 7 个数据：
+dev_explode = [0.1]*7
+exblode=dev_explode 
+```
 
