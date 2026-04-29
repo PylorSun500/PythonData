@@ -172,3 +172,24 @@ dev_explode = [0.1]*7
 exblode=dev_explode 
 ```
 
+还有一些内容....
+
+## 雷达图 `pyplot.polar()`
+
+用法：
+```py
+plt.polar(theta, r, **kwargs)
+```
+其中，`angles` 表示角度坐标；`data` 表示
+
+### 为雷达图做标签
+
+### 为雷达图做填充色
+
+## 单子图绘制 `pyplot.subplot()`
+
+用法：
+```python
+plt.subplot(nrows, ncols, index, sharex, sharey, projection)
+```
+
