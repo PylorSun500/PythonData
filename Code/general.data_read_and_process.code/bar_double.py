@@ -3,7 +3,7 @@ from matplotlib import font_manager as fm
 import numpy as np
 import pandas as pd
 
-fontpath = '/home/pylorsun/Documents/Study/2025-2026第二学期/PythonData/Assets/FontSources/CN_SA_寒蝉端黑体 v1.3/ChillDuanSansVF.ttf'
+fontpath = '../../Assets/FontSources/CN_SA_寒蝉端黑体 v1.3/ChillDuanSansVF.ttf'
 fm.fontManager.addfont(fontpath)
 fontname = fm.FontProperties(fname=fontpath).get_name()
 plt.rcParams['font.family'] = [fontname]
